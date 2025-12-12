@@ -57,11 +57,36 @@
             </li>
           </ul>
         </li>
+        <?php if(isAdmin()):?>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon bi bi-journal-bookmark-fill"></i>
+              <p>
+                Quản lý huớng dẫn viên
+                <i class="nav-arrow bi bi-chevron-right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-circle"></i>
+                  <p>Danh sách huớng dẫn viên</p>
+                </a>
+              </li>
+              <li class="nave-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-circle"></i>
+                  <p>Thêm huớng dẫn viên mới</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        <?php endif; ?>
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon bi bi-people-fill"></i>
             <p>
-              Quản lý Khách hàng
+             Quản lý Booking
               <i class="nav-arrow bi bi-chevron-right"></i>
             </p>
           </a>
@@ -69,7 +94,13 @@
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="nav-icon bi bi-circle"></i>
-                <p>Danh sách Khách hàng</p>
+                <p>Danh sách Booking</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?= BASE_URL ?>booking/create" class="nav-link">
+                <i class="nav-icon bi bi-circle"></i>
+                <p>Thêm Booking mới</p>
               </a>
             </li>
           </ul>
@@ -88,6 +119,12 @@
                 <a href="#" class="nav-link">
                   <i class="nav-icon bi bi-circle"></i>
                   <p>Danh sách Người dùng</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= BASE_URL ?>user/create" class="nav-link">
+                  <i class="nav-icon bi bi-circle"></i>
+                  <p>Thêm Người dùng mới</p>
                 </a>
               </li>
             </ul>
